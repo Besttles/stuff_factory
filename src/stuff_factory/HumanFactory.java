@@ -18,4 +18,20 @@ public class HumanFactory {
 		}
     	return human;
     }
+    public static Object createThing(String human) {
+    	Object object = null;
+		try {
+			object = Class.forName(human).newInstance();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return object;
+    }
 }

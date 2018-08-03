@@ -1,6 +1,6 @@
 package stuff_factory;
 
-public class White implements Human {
+public class White implements Human ,Soul{
 
 	@Override
 	public void laugh() {
@@ -10,6 +10,11 @@ public class White implements Human {
 	@Override
 	public void doSomething() {
         System.out.println("white people can do someThing");
+	}
+
+	@Override
+	public void think() {
+		System.out.println("think about myself");
 	}
 
 }
